@@ -15,6 +15,7 @@ module "eks_node_group" {
   source = "./modules/eks-node-group"
 
   cluster_name       = module.eks_cluster.cluster_name
+  cluster_version    = var.eks_cluster_version
   node_group_name    = var.node_group_name
   node_role_arn      = module.eks_iam_roles.node_role_arn
   subnet_ids         = module.vpc.private_subnet_ids
