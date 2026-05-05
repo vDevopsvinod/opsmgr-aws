@@ -8,9 +8,10 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "vinod-terraform-states"
-    key    = "terraform.tfstate"
-    region = "us-east-1"
+    bucket         = "vinod-terraform-states"
+    key            = "terraform.tfstate"
+    region         = "us-east-1"
+    dynamodb_table = "terraform-locks"
   }
 }
 
