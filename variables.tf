@@ -31,7 +31,7 @@ variable "availability_zones" {
 variable "tags" {
   description = "Tags applied to created resources"
   type        = map(string)
-  default     = {
+  default = {
     Environment = "dev"
     ManagedBy   = "terraform"
   }
