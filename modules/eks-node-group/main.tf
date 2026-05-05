@@ -3,7 +3,6 @@ resource "aws_eks_node_group" "this" {
   node_group_name = var.node_group_name
   node_role_arn   = var.node_role_arn
   subnet_ids      = var.subnet_ids
-  version         = var.cluster_version
 
   scaling_config {
     desired_size = var.desired_size
